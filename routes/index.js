@@ -1,9 +1,8 @@
-var express = require('express');
-var router = express.Router();
+var express = require('express')
+var router = express.Router()
+const tweet = require('../controllers/controller.tweet')
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.get('/tweet/post/:posting', tweet.postTweet)
 
-module.exports = router;
+module.exports = router
